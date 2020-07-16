@@ -2,9 +2,12 @@
 
 In DBMS Linter, file and data sizes are measured in memory pages. One such page is 4 KBytes. To obtain the sizes of system and user database files and their indexes, you need to refer to the $$$ SYSRL and $$$ USR system tables. $$$ SYSLR has information about all DB tables / views. It contains the following columns:
 
-• $$$ S11 (integer) - Object system identifier
+• $$$ S11 (integer) - Object system identifier.
+
 • $$$ S12 (integer) - Owner ID.
+
 • $$$ S13 (char (66)) - Object name.
+
 • $$$ S14 (byte (262)) - System description of the object.
 
 $$$ USR has information about all database users and their privileges, roles, and the assignment of roles to database users. It contains the following columns:
