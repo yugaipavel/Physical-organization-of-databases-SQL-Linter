@@ -60,11 +60,13 @@ DBMS Linter has a built-in function LINTER_FILE_INFO ("table identifier", "file 
 When the Physical-organization-of-databases-SQL-Linter.py script was run for the first time, it was found that with 1000 records, the table file size is 31 pages, and with 2000 records, 47 pages, and also with 3000 records, the index file size table is 18 pages, and for 4000 records - 34 pages. After that, the script was modified to detect the number of records at which the size of the table file and the table index file increases by changing the loop condition to for local_count in range (1000, 2000) and for local_count in range (3000, 4000), respectively. With 1420 records, the table file size increases from 31 to 47, and with 3797 records, the index file size of this table increases from 18 to 34. The sizes of one table record and one index for it are calculated as follows (one page = 4 KB):
 
 Record_size = 31 * 4 * 1024/1419 = 89.48 bytes.
+
 Index_size = 18 * 4 * 1024/3796 = 19.42 bytes.
 
 To make sure that the single record and index sizes are calculated correctly, calculate the table and index file sizes at 1,000,000 records using the calculated sizes.
 
 Table_size_1000000 = (89.48 * 1000000) / (4 * 1024) ≈ 21845 pages.
+
 Index_size_1000000 = (19.42 * 1000000) / (4 * 1024) ≈ 4741 pages.
 
 The values obtained are approximately the same as those obtained using SQL queries. Thus, the calculated values ​​of the sizes of one record and one index are correct.
