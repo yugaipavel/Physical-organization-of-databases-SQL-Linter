@@ -51,8 +51,8 @@ record;
      $$$ S35 byte (240) - For user - description of user rights; for other types of records - 18 spaces, other bytes - zeros.
 
 
-DBMS Linter has a built-in function LINTER_FILE_INFO (<table identifier>, <file type>, <file number>, <information type>).
-1) The <table identifier> parameter specifies the identifier of the table whose file status information is to be obtained. Table IDs are stored in the $$$ SYSRL system table, column $$$ S11.
-2) The <file type> parameter sets the table file type: 0 - index file; 1 - data file; 2 - BLOB data file.
-3) The <file number> parameter defines the sequence number of the file of the specified type (starting from 1).
-4) The <information type> parameter determines the type of file requested information. The parameter data type is CHAR, the parameter values ​​are case-insensitive.
+DBMS Linter has a built-in function LINTER_FILE_INFO ("table identifier", "file type", "file number", "information type").
+1) The "table identifier" parameter specifies the identifier of the table whose file status information is to be obtained. Table IDs are stored in the $$$ SYSRL system table, column $$$ S11.
+2) The "file type" parameter sets the table file type: 0 - index file; 1 - data file; 2 - BLOB data file.
+3) The "file number" parameter defines the sequence number of the file of the specified type (starting from 1).
+4) The "information type" parameter determines the type of file requested information. The parameter data type is CHAR, the parameter values are case-insensitive.
